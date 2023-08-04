@@ -29,7 +29,6 @@ image_url VARCHAR(500),
 isbn VARCHAR(17),
 release_date DATE
 );
+```
 
 5. Start the backend & frontend server: npm run dev
-
-```
