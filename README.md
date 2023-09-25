@@ -25,7 +25,7 @@ CREATE TABLE posts (
 id SERIAL PRIMARY KEY,
 name VARCHAR(255),
 author VARCHAR(255),
-image_url VARCHAR(500),
+image_url VARCHAR(255),
 isbn VARCHAR(17),
 release_date DATE
 );
