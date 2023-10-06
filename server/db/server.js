@@ -1,4 +1,5 @@
 import pg from 'pg';
+
 const { Pool } = pg;
 
 const pool = new Pool({
@@ -11,7 +12,7 @@ const pool = new Pool({
 
 pool.connect((err) => {
   if (err) {
-    console.error('connection error', err.stack);
+    console.error('connection error');
   } else {
     console.log('connected to ElephantSQL');
   }

@@ -5,10 +5,6 @@ import axios from 'axios';
 function Books() {
   const [books, setBooks] = useState([]);
 
-  useEffect(() => {
-    fetchBooks();
-  }, []);
-
   const fetchBooks = () => {
     axios
       .get('http://localhost:8000/posts')
@@ -19,6 +15,10 @@ function Books() {
         console.error('Error:', error);
       });
   };
+
+  useEffect(() => {
+    fetchBooks();
+  }, []);
 
   const handleDelete = async (bookId) => {
     await axios.delete(`http://localhost:8000/posts/${bookId}`);
