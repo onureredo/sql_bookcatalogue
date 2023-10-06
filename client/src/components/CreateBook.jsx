@@ -14,7 +14,7 @@ function CreateBook({ setBooks }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post('http://localhost:8000/posts', newBook)
+      .post('https://example-xtvq.onrender.com/posts', newBook)
       .then((response) => {
         console.log('Success:', response.data);
         alert('Book created successfully!');

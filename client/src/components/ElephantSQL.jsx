@@ -7,7 +7,7 @@ function Books() {
 
   const fetchBooks = () => {
     axios
-      .get('http://localhost:8000/posts')
+      .get('https://example-xtvq.onrender.com/posts')
       .then((response) => {
         setBooks(response.data);
       })
@@ -21,7 +21,7 @@ function Books() {
   }, []);
 
   const handleDelete = async (bookId) => {
-    await axios.delete(`http://localhost:8000/posts/${bookId}`);
+    await axios.delete(`https://example-xtvq.onrender.com/posts/${bookId}`);
     setBooks((prevBooks) => prevBooks.filter((book) => book.id !== bookId));
     alert('Book is successfully deleted');
   };
